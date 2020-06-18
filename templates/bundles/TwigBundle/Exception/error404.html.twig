@@ -1,0 +1,25 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+
+		<header class="masthead bg-primary text-white text-center " style="background-image: url(/images/4041.png)"></header><br><br>
+
+
+		
+        <center>
+        <img src = "/images/404.jpeg">
+        </center><br/>
+
+		<p>
+			The requested page couldn't be located. Checkout for any URL
+			        misspelling or
+			<a href="{{ path ('home') }}">return to the homepage</a>.
+		</p><br/><br/><br/>
+
+	</div>
+
+
+{% endblock %}

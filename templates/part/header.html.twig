@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="{{path('home')}}">
+		<b>SNOWMASS</b>
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarColor03">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"></li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<ul class="navbar-nav mr-auto ">
+
+				<li class="nav-item">
+					<a class="nav-link" href="{{path ('home')}}">
+						<b>Home</b>
+					</a>
+				</li>
+
+				{% if app.user %}
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<b>{{app.user.username}}<b></a>
+								<div class="dropdown-menu dropdown-menu-right" style="">
+
+									<a class="dropdown-item" href="{{path ('show_user')}}">
+										<i class="fa fa-home"></i>
+										<b>Dashboard</b>
+									</a>
+
+									<a class="dropdown-item" href="{{ path ('update_password')}}">
+										<i class="fas fa-redo"></i>
+										<b>Change your Password</b>
+									</a>
+
+									<a class="dropdown-item" href="{{path ('update_profile')}}">
+										<i class="fas fa-user-circle"></i>
+										<b>Update Profile</b>
+									</a>
+
+									<a class="dropdown-item" href="{{ path ('logout')}}">
+										<i class="fas fa-sign-out-alt"></i>
+										<b>Logout</b>
+									</a>
+								</div>
+							</li>
+
+
+						{% else %}
+							<li class="nav-item">
+								<a class="nav-link" href="{{path ('home')}}">
+									<b>Tricks</b>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{path ('login_user')}}">
+									<b>Signin</b>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="{{path ('user_account_register')}}">
+									<b>Signup</b>
+								</a>
+							</li>
+						{% endif %}
+					</li>
+				</ul>
+			</form>
+		</div>
+	</nav>

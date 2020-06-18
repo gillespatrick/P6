@@ -1,15 +1,37 @@
 security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+   
+
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        users_in_memory: { memory: null }
+        in_memory: { memory: null }
+        in_db: 
+            entity:
+                class: App\Entity\User
+                property: username
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
-            lazy: true
-            provider: users_in_memory
+            user_checker: App\Security\UserCheck
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+
+            #Authentification des user
+            provider: in_db
+            form_login:
+                login_path: login_user
+                #login_path: user_account
+                #default_target_path: show_user
+                check_path: login_user
+            logout:
+                path: logout
+                target: home
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -22,3 +44,4 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/login$, roles: ROLE_USER }

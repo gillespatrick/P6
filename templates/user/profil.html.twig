@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UPDATE YOUR PROFILE
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="container mt-5">
+
+		<div class="jumbotron" style="background-image: url({{ asset ('/images/profile.jpg')}})">
+
+			<p class="lead text-warning"></p>
+
+		</div><br>
+		{% block flash_message %}
+			{% for message in app.flashes('notice') %}
+				<div class="alert alert-dismissible alert-success">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endblock %}
+		<div class="row">
+			<div class="col-md-3">&nbsp;</div>
+			<div class="col-md-6">
+				<div class="bg-light py-3 px-3">
+
+					<h1>
+						Update your profile</h1><br><hr><br>
+
+					{{ form_start(form)}}
+					{{ form_widget(form)}}
+					<button type="submit" class="btn btn-primary btn-lg">
+						<i class="fas fa-redo"></i>
+						Update
+					</button>
+
+					<a href="{{path ('show_user')}}" class="btn btn-danger btn-lg ">
+						<i class="fas fa-window-close"></i>
+						Cancel</a>
+					{{form_end(form)}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>{% endblock %}

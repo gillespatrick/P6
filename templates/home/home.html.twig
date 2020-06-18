@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HOME
+{% endblock %}
+
+{% block body %}
+
+	<div class="container ">
+		<div class="container mt-5">
+			<div class="jumbotron " style="background-image: url({{ asset ('/images/snow.jpg')}})">
+				<h1 class="display-3">Welcome on SnowMass!</h1>
+				<p class="lead text-warning">All things you want to know about snowtrick are here.</p>
+
+			</div>
+			{% block flash_message %}
+				{% for message in app.flashes('notice') %}
+					<div class="alert alert-dismissible alert-success">
+						{{ message }}
+					</div>
+				{% endfor %}
+			{% endblock %}
+			<div class="text-right">
+				<a href="#" id="back-bottom" class="page-scroll">
+
+					<i class="far fa-arrow-alt-circle-down fa-2x"></i>
+				</a>
+			</div>
+			<h1>
+				<b>There are all the snowtrick list</b>
+			</h1><br>
+
+
+			<div id="tricks" class="row">
+
+				{% for trick in tricks %}
+					{% include 'home/_trick.html.twig' %}
+
+				{% endfor %}</br>
+				<div class="container ">
+				<div class="d-flex justify-content-center col-sm-s8 mx-auto mb-4">
+					<ul class="pagination">
+						<li class="page-item {% if page == 1 %}disabled {% endif %}">
+							<a class="page-link" href="{{ path ('home', {'page':page -1 }) }}">&laquo;</a>
+						</li>
+						{% for i in 1..pages %}
+							<li class="page-item {% if page == i %}active {% endif %}">
+								<a class="page-link" href="{{ path ('home', {'page':i}) }}">{{i}}</a>
+							</li>
+						{% endfor %}
+
+						<li class="page-item {% if page == pages %}disabled {% endif %} ">
+							<a class="page-link" href="{{ path ('home', {'page':page + 1}) }}">&raquo;</a>
+						</li>
+					</ul>
+				</div>
+				</div>
+
+
+			</div>
+
+			<div class=" container text-right">
+				<a href="#tricks" id="back-top" class="page-scroll">
+					<i class="far fa-arrow-alt-circle-up fa-2x"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

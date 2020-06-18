@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trick Edition
+{% endblock %}
+
+{% form_theme form _self %}
+
+
+{% block body %}
+
+	<div class="container ">
+
+		<header class="masthead bg-primary text-white text-center " style="background-image: url(/images/edition.png)"></header><br><br>
+
+
+		<i>
+			<center>
+				<h1>
+					Edition Trick :
+					{{trick.name}}
+				</h1>
+			</center>
+		</i><hr><br>
+
+		{{ form_start(form)}}
+
+		{{ form_widget(form)}}
+		<a href="{{ path ('trickdelete', {'slug':trick.slug})}}" class="btn btn-danger btn-lg" onclick="return confirm (`Are you sure you want to delete this trick: {{ trick.name	}} ?`)">
+			<i class="fas fa-trash-alt"></i>
+			Delete
+		</a>
+		<button type="submit" class="btn btn-success btn-lg">
+
+
+			<i class="far fa-save"></i>
+			Edit...
+
+
+		</button>
+
+		{{ form_end(form)}}
+
+
+	</div>
+
+
+{% endblock %}
+
+
+{% block _trick_media_widget %}
+	<p>
+		There you most add your own pictures</p>
+
+	{{form_widget(form)}}
+
+	<input type="hidden" id="widgets-counter" value="0">
+	<div class="form-group">
+		<button type="button" id="add_media" class="btn btn-primary ">
+			<i class="fas fa-plus-square"></i>
+		</button>
+	</div>
+{% endblock %}
+
+
+{% block _trick_media_entry_row %}
+	{{ form_widget(form)}}
+
+{% endblock %}
+
+{# Entry_Type of MediaType#}
+
+{% block _trick_media_entry_widget %}
+
+	<div class="form-group" id="block_{{id}}">
+
+
+		<div class="row">
+			<div class="col-10">
+				<div class="row">
+					<div class="col">
+						{{ form_widget(form.urlVideo)}}
+						{{ form_errors(form.urlVideo)}}</div>
+
+					<div class="col">{{ form_widget(form.picture)}}
+						{{ form_errors(form.picture)}}</div>
+					<div class="col-2">
+						<button type="button" data-action="delete" data-target="#block_{{id}}" id="add_media" class="btn btn-danger ">
+							<i class="far fa-trash-alt"></i>
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+	<script>
+		$('#add_media').click(function () { // const index = $('#trick_media div.form-group').length;
+const index = + $('#widgets-counter').val();
+
+
+const temp = $('#trick_media').data('prototype').replace(/__name__/g, index);
+$('#trick_media').append(temp);
+$('#widgets-counter').val(index + 1);
+
+// Manage delete Button
+handleDeleteButton();
+});
+
+
+function handleDeleteButton() {
+$('button[data-action= "delete"]').click(function () {
+const target = this.dataset.target;
+$(target).remove();
+});
+}
+handleDeleteButton();
+	</script>
+
+
+{% endblock %}

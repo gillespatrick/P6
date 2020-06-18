@@ -1,0 +1,23 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+
+		
+
+		
+        <center>
+        <img src = "/images/404.jpeg">
+        </center><br/>
+
+		<p>
+			<h1>HTTP 500 Internal Server Error</h1>
+			<a href="{{ path('home') }}">return to the homepage</a>.
+		</p><br/><br/><br/>
+
+	</div>
+
+
+{% endblock %}

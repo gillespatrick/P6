@@ -1,0 +1,13 @@
+<p>
+	Hello
+	{{user.username}}, a password reset request has been requested for your account!
+	<br>
+	To reset your password, please click on the link below:
+	<br>
+	<a href="{{ url('password_reset', {username: user.username, token: user.token })}}">
+		Reset my password
+		<a>
+			<br>
+			<br>
+			Thank you !
+			<h3>SnowTricksMass Team<h3></p>

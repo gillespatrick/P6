@@ -1,0 +1,40 @@
+<div class="col-md-4">
+	<div class="card bg-light mb-3">
+
+		<img class="card-img-top img-thumbnail" ; alt="Trick Picture" ; src="{{ asset ('/images/'~ trick.cover )}}" style="height: 200px ;width: 100% ; display: block"/>
+
+
+		<div class="card-body ">
+
+
+			<a href="{{ path ('showdetail', {'slug': trick.slug}) }}">
+				<h4 class="card-title"><b>{{trick.name | slice(0, 8)| raw }}</b></h4>
+			</a>
+
+			<p class="card-text">
+				{{trick.description | slice(0, 30)| raw }}
+			</p>
+		</div>
+		<h5>
+			<div class="float-right">
+				<a class="btn btn btn-primary " href="{{ path ('showdetail', {'slug': trick.slug}) }}">
+					<i class="fas fa-plus-square"></i>
+					More Details
+				</a>
+
+
+				{% if app.user and app.user == trick.user %}
+					<a href="{{ path ('trick_edit', {'slug':trick.slug})}}" class="btn btn-info ">
+						<i class="fas fa-pencil-alt"></i>
+						Edit
+					</a>
+					<a href="{{ path ('trickdelete', {'slug':trick.slug})}}" class="btn btn-danger" onclick="return confirm (`Are you sure you want to delete this trick: {{ trick.name	}} ?`)">
+						<i class="fas fa-trash-alt"></i>
+						Delete
+					</a>
+				{% endif %}
+			</div>
+			<h5></div>
+
+
+		</div>

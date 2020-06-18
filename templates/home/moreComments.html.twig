@@ -1,0 +1,21 @@
+{% for comment in trick.comments | slice(start, length) %}
+	<div class="comment row mx-auto">
+		<div class="col-md-10 col-12 mx-auto row">
+			<div class="userImage col-lg-2 col-4">
+				<img src="{{ asset( comment.user.img) }}" class="avatar avatar-medium">
+			</div>
+			<p class="col-lg-10 col-8 bg-light">
+				<strong>{{ comment.createDate | date('m/d/Y')}}
+					at
+					{{ comment.createDate | date('H:i')}}
+					-
+					{{ comment.user.username}}
+					wrote :</strong>
+
+				<br>{{ comment.content | raw }}
+			</p>
+		</div>
+	</div><br>
+
+
+{% endfor %}

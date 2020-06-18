@@ -1,0 +1,13 @@
+<P>
+	Hello
+	{{user.username}}, you have successfully signed up for SnowTricks!
+	<br>
+	To validate your account, please validate your email by clicking on the link below:
+	<br>
+	<a href="{{ url('email_validation', {username: user.username, token: user.token})}}">
+		Activate my account
+		<a>
+			<br>
+			<br>
+			Thank you !
+		</P>

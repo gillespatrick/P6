@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Account
+	{{ user.username}}
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="container mt-3">
+		<div class="jumbotron" style="background-image: url(/images/profile.png)">
+			<h1 class="display-3 text-red">Your profile</h1>
+			<p class="lead text-warning"></p>
+
+		</div><br>
+		<div class="row align-items-center">
+			<div class="col-3">
+				<center>
+					<img class="rounded-circle" src={{asset ('/images/'~ user.img)}} alt=" Avatar {{user.username}}" style="height: 200px ;
+																								                                                         width: 80% ; display: block">
+					<br><br></center>
+			</div><br>
+
+
+			<div class="col-9">
+				<h1>
+					<b>{{ user.username}}</b></h1><br>
+				{% block flash_message %}
+					{% for message in app.flashes('notice') %}
+						<div class="alert alert-dismissible alert-success">
+							{{ message }}
+						</div>
+					{% endfor %}
+				{% endblock %}
+				{% if user is same as (app.user) %}{% endif %}
+
+			</div>
+		</div>
+
+		<div class="col-lg-10 col-md-10 mx-auto">
+
+			<a class="btn btn-info btn-lg" href="{{ path ('add_trick')}}">
+				<i class="fa fa-plus"></i>
+				New Trick</a>
+
+		</div>
+
+		<hr>
+		<h2>
+			All my publications on the tricks
+		</h2><br>
+		{% if user.tricks | length > 0 %}
+			<div class="row">
+				{% for trick in user.tricks %}
+					{% include 'home/_trick.html.twig' %}
+				{% endfor %}
+			</div>
+
+		{% else %}
+			<div class=" alert-warning">
+				<p>
+					<strong>
+						{{ user.username}}
+						didn't have the tricks</strong>
+				</p>
+			</div>
+
+		{% endif %}
+
+	</div>
+
+{% endblock %}

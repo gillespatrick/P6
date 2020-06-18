@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>
+			SNOWMASS-
+			{% block title %}{% endblock %}
+		</title>
+
+
+		{% block stylesheets %}
+
+
+			<!-- JS -->
+			<script src="{{asset ('all.js')}}"></script>
+			<script src="{{ asset ('jquery.min.js')}}"></script>
+
+
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+			<link href="{{ asset ('https://fonts.googleapis.com/css?family=Montserrat:400,700')}}" rel="stylesheet" type="text/css">
+			<link
+			href="{{ asset('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic')}}" rel="stylesheet" type="text/css">
+			<!-- Theme CSS -->
+			<link
+			href="{{ asset('https://bootswatch.com/4/yeti/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+
+
+		{# 
+														       <link href="{{ asset ('freelancer.min.css')}}" rel="stylesheet" type = "text/css" />   
+														       <link rel="stylesheet" href="{{ asset ('build/css/app.css') }}" type = "text/css"  /> 
+														       <link href="{{ asset('https://bootswatch.com/4/yeti/bootstrap.min.css')}}" rel="stylesheet" type="text/css"> 
+														             
+														      #}
+
+
+		{% endblock %}
+
+
+	</head>
+
+
+	<body id="page-top"></body>
+</html>{% include "part/header.html.twig" %}{% block body %}{% endblock %}{% block javascripts %}{% endblock %}{% include "part/footer.html.twig" %}</body></html>

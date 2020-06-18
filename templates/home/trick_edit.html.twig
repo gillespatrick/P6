@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	TRICK EDITION
+{% endblock %}
+
+
+{% block body %}
+
+	<div class="container ">
+
+		<header class="masthead bg-primary text-white text-center " style="background-image: url(/images/edition.png)"></header><br><br>
+
+
+		<i>
+			<center>
+				<h1>
+					Trick Edition
+				</h1>
+			</center>
+		</i><hr><br>
+		{{ form_start(form)}}
+
+		{{ form_widget(form)}}
+		<button type="submit" class="btn btn-success btn-lg">
+			<i class="fas fa-save"></i>
+			Update...
+		</button>
+
+		{{ form_end(form)}}
+
+
+	</div>
+
+{% endblock %}
