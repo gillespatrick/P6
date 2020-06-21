@@ -107,8 +107,8 @@ class UserController extends AbstractController
                     $this->renderView('user/reset.html.twig', [
                             'user' => $user,
                         ]),
-                        'text/html'
-                    )
+                    'text/html'
+                )
                 ;
 
                 $mailer->send($message);

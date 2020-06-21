@@ -66,11 +66,11 @@ class Trick
      */
     private $cover;
 
-   /**
-     * @var string
-     * @Gedmo\Slug(fields = {"name"})
-     * @ORM\Column(type="string", length=255)
-     */
+    /**
+      * @var string
+      * @Gedmo\Slug(fields = {"name"})
+      * @ORM\Column(type="string", length=255)
+      */
     private $slug;
 
     /**
@@ -201,23 +201,22 @@ class Trick
     public function setSlug(string $slug): void
     {
         $this->slug = $slug;
-        
     }
 
     
 
-        //  /**
-        //  * @ORM\PrePersist
-        //  * @ORM\PreUpdate
-        //  *
-        //  * @return void
-        // */
-        // public function initSlug(){
-        //     if (empty ($this -> slug)){
-        //         $slugify = new Slugify();
-        //         $this -> slug = $slugify -> slugify($this -> name);
-        //     }
-        // }
+    //  /**
+    //  * @ORM\PrePersist
+    //  * @ORM\PreUpdate
+    //  *
+    //  * @return void
+    // */
+    // public function initSlug(){
+    //     if (empty ($this -> slug)){
+    //         $slugify = new Slugify();
+    //         $this -> slug = $slugify -> slugify($this -> name);
+    //     }
+    // }
 
     /**
      * @return Collection|Media[]
