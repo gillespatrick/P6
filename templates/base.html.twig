@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -14,27 +13,34 @@
 
 		{% block stylesheets %}
 
-
+		
+			<!--   <link href="#" rel="stylesheet"/>  -->
+			<link
+			rel="stylesheet" href="{{ asset ('app.css')}}">
+			   
 			<!-- JS -->
-			<script src="{{asset ('all.js')}}"></script>
 			<script src="{{ asset ('jquery.min.js')}}"></script>
+			<script src="{{ asset ('build/js/app.js') }}"></script>
 
-
+			<!-- CSS only -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 			<link href="{{ asset ('https://fonts.googleapis.com/css?family=Montserrat:400,700')}}" rel="stylesheet" type="text/css">
 			<link
-			href="{{ asset('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic')}}" rel="stylesheet" type="text/css">
+			href="{{ asset ('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic')}}" rel="stylesheet" type="text/css">
 			<!-- Theme CSS -->
 			<link
-			href="{{ asset('https://bootswatch.com/4/yeti/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+			href="{{ asset ('https://bootswatch.com/4/yeti/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 
 
-		{# 
-														       <link href="{{ asset ('freelancer.min.css')}}" rel="stylesheet" type = "text/css" />   
-														       <link rel="stylesheet" href="{{ asset ('build/css/app.css') }}" type = "text/css"  /> 
-														       <link href="{{ asset('https://bootswatch.com/4/yeti/bootstrap.min.css')}}" rel="stylesheet" type="text/css"> 
-														             
-														      #}
+		{#    
+
+																       <link href="{{ asset ('freelancer.min.css')}}" rel="stylesheet" type = "text/css" />   
+																       <link rel="stylesheet" href="{{ asset ('build/css/app.css') }}" type = "text/css"  /> 
+																       <link href="{{ asset('https://bootswatch.com/4/yeti/bootstrap.min.css')}}" rel="stylesheet" type="text/css"> 
+																          
+		
+		 #}
 
 
 		{% endblock %}
@@ -44,4 +50,8 @@
 
 
 	<body id="page-top"></body>
-</html>{% include "part/header.html.twig" %}{% block body %}{% endblock %}{% block javascripts %}{% endblock %}{% include "part/footer.html.twig" %}</body></html>
+</html>
+{% include "part/header.html.twig" %}
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+{% include "part/footer.html.twig" %}</body></html>

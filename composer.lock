@@ -4,8 +4,81 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b41cc7d00dabee5cab0a12a7db0dab9",
+    "content-hash": "1bb70cbfbef275c06673df25966b30bb",
     "packages": [
+        {
+            "name": "antishov/doctrine-extensions-bundle",
+            "version": "v1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antishov/StofDoctrineExtensionsBundle.git",
+                "reference": "19c8d45e7ceb6477ef490f21ab4279e549c1e828"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antishov/StofDoctrineExtensionsBundle/zipball/19c8d45e7ceb6477ef490f21ab4279e549c1e828",
+                "reference": "19c8d45e7ceb6477ef490f21ab4279e549c1e828",
+                "shasum": ""
+            },
+            "require": {
+                "gedmo/doctrine-extensions": "^2.3.4",
+                "php": ">=7.1",
+                "symfony/framework-bundle": "^4.3|^5.0"
+            },
+            "conflict": {
+                "stof/doctrine-extensions-bundle": "*"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^4.3|^5.0",
+                "symfony/security-bundle": "^4.3|^5.0"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "to use the ORM extensions",
+                "doctrine/mongodb-odm-bundle": "to use the MongoDB ODM extensions"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stof\\DoctrineExtensionsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antishov Viktor",
+                    "email": "antishov.viktor@gmail.com"
+                },
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "Forked from stof/doctrine-extensions-bundle integration of the gedmo/doctrine-extensions with Symfony 4",
+            "homepage": "https://github.com/antishov/StofDoctrineExtensionsBundle",
+            "keywords": [
+                "behaviors",
+                "doctrine2",
+                "extensions",
+                "gedmo",
+                "loggable",
+                "nestedset",
+                "sluggable",
+                "sortable",
+                "stof",
+                "timestampable",
+                "translatable",
+                "tree"
+            ],
+            "time": "2019-12-03T19:50:27+00:00"
+        },
         {
             "name": "behat/transliterator",
             "version": "v1.3.0",
@@ -1663,6 +1736,39 @@
                 }
             ],
             "time": "2020-05-22T08:12:19+00:00"
+        },
+        {
+            "name": "ninsuo/symfony-collection",
+            "version": "2.1.33",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ninsuo/symfony-collection.git",
+                "reference": "231f790eee9ea2c3301ac45f5fe4fbb09ec4289c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ninsuo/symfony-collection/zipball/231f790eee9ea2c3301ac45f5fe4fbb09ec4289c",
+                "reference": "231f790eee9ea2c3301ac45f5fe4fbb09ec4289c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "ScriptHandler.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alain Tiemblo",
+                    "email": "ninsuo@gmail.com"
+                }
+            ],
+            "description": "A jQuery plugin that manages adding, deleting and moving elements from a Symfony collection",
+            "time": "2020-01-13T12:54:48+00:00"
         },
         {
             "name": "ocramius/package-versions",

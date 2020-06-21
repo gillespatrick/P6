@@ -50,6 +50,7 @@ class TickController extends AbstractController
 
             if (!$trick->getId()) {
                 $trick->setCreateDate(new \DateTime());
+               
             }
 
             $trick->setUser($this->getUser());

@@ -21,7 +21,6 @@ class TrickType extends ConfigurationType
             ->add('description', TextareaType::class, $this->getConfig('Description', 'Enter the trick description'))
             //->add('create_date')
             ->add('cover', FileType::class, ['data_class' => null], $this->getConfig('Url Image', 'Select your main image'))
-            ->add('slug', TextType::class, $this->getconfig('Slug', 'This field is automatically filled', ['required' => false]))
             ->add('category', EntityType::class, [
                 'class' => Category::class,
                 'choice_label' => 'name',
