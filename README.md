@@ -1,6 +1,7 @@
 # P6 snowTrickMass
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9f4e930c312d48ae9037625c2b8c19a6)](https://www.codacy.com/manual/gillespatrick/P6?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gillespatrick/P6&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6fddb49f2e5a792acc5b/maintainability)](https://codeclimate.com/github/gillespatrick/P6/maintainability)
 
 
 Community website snowboard figures with Symfony framework.
