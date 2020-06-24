@@ -1,5 +1,5 @@
 <VirtualHost *:80>
-    ServerName LiteSpeed
+    ServerName server217
     ServerAlias https://snowtrickmass.com
 
     DocumentRoot /home/u287307345/domains/snowtrickmass.com/public_html/public
