@@ -4,9 +4,7 @@
 
     DocumentRoot /home/u287307345/domains/snowtrickmass.com/public_html/public
     <Directory /home/u287307345/domains/snowtrickmass.com/public_html/public>
-        AllowOverride All
-        Order Allow,Deny
-        Allow from All
+    AllowOverride None
     </Directory>
 
 
