@@ -1,13 +1,4 @@
-<VirtualHost *:80>
-    ServerName server217
-    ServerAlias https://snowtrickmass.com
-
-    DocumentRoot /home/u287307345/domains/snowtrickmass.com/public_html/public
-    <Directory /home/u287307345/domains/snowtrickmass.com/public_html/public>
-    AllowOverride None
-    </Directory>
-
-
-    ErrorLog /var/log/apache2/project_error.log
-    CustomLog /var/log/apache2/project_access.log combined
-</VirtualHost>
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^snowtrickmass.com [NC] 
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
