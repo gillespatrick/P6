@@ -1034,8 +1034,6 @@
                 "migrations",
                 "php"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -1050,7 +1048,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-21T08:55:42+00:00"
         },
         {
@@ -4387,8 +4384,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4403,7 +4398,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-06T08:46:27+00:00"
         },
         {
@@ -4466,8 +4460,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4482,7 +4474,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-06T08:46:27+00:00"
         },
         {
@@ -4549,8 +4540,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4565,7 +4554,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-06T08:46:27+00:00"
         },
         {
@@ -4633,8 +4621,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4649,7 +4635,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-14T14:40:37+00:00"
         },
         {
@@ -4713,8 +4698,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4729,7 +4712,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-06T08:46:27+00:00"
         },
         {
@@ -4792,8 +4774,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4808,7 +4788,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-06T08:46:27+00:00"
         },
         {
@@ -4875,8 +4854,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4891,7 +4868,6 @@
                     "type": "tidelift"
                 }
             ],
->>>>>>> f26f849228b0edff81e56a33933d731963f89e2e
             "time": "2020-06-06T08:46:27+00:00"
         },
         {
